@@ -1,0 +1,50 @@
+<header>
+    <nav class="navbar">
+        <div class="itens-esquerda" >
+            <a href="#" class="logo-link">
+                <i class="fa-solid fa-layer-group icone" style="color: #10B981; margin-right: 8px;"></i>
+                <h1 class="titulo">DEV VAULT</h1>
+            </a>
+        </div>
+
+        <div class="itens-direita" >
+            <ul class="lista-itens">
+                <li class="task-pending">Problemas resolvidos: 15</li>
+                <li class="sino"><i class="fa-solid fa-bell"></i></li>
+                <li class="perfil"><i class="fa-solid fa-user"></i></li>
+            </ul>
+        </div>
+    </nav>
+</header> 
+<main class="main-corpo">
+    <section class="section-left">
+        <form   method="post" action="/registraProblemaSolucao" class="form-column">
+            <div class="input-group">
+                <label class="label-style" for="title-form">Titúlo do problema resolvido:</label>
+                <input class="input-style" name="title-form" id="title-form" type="text" placeholder="Exempo: Erro na api">
+            </div>
+            <div class="seletor-group">
+                <label class="label-style" for="seletor-category">Categoria:</label>
+                <select class="seletor-style" name="seletor-category" id="seletor-category">
+                <option value="" disabled selected>Selecione uma Categoria</option>
+                <option value="Java">Java</option>
+                <option value="PHP">PHP</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+            </div>
+            <div class="text-area-group">
+                <label class="label-style" for="description-form">Descrição do problema:</label>
+                <textarea placeholder="Descrição" class="description" name="description-form" id="description-form"></textarea>
+            </div>
+            <button class="button-style" type="submit">CLIQUE AQUI PARA ENVIAR</button>
+        </form>
+    </section>
+    <section class="section-right">
+        <!-- Cada item adicionado é um item proprio logo pode ser usado uma article -->
+            <article class="card">
+            <h3 class="title-task">Erro no servidor, docker e produção caiu</h3>
+            <p class="description-task">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates rerum labore beatae, dolorum velit qui placeat, fugiat natus, ullam nostrum officiis voluptatibus in provident laborum consequuntur dolorem autem eum vitae!</p>
+            <span class="data-card">12/10/2026</span>
+            </article>
+    </section>
+</main>

@@ -1,0 +1,183 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color:  #131b28;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0px 0px 10px 0px;
+    /* A MÁGICA DA LINHA AQUI: */
+    border-bottom: 1px solid #2d3748; /* Um cinza-azulado bem sutil */
+}
+
+.logo-link{
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.titulo, .icone {
+    font-size: 26px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 900;
+    padding: 10px 3px 10px 3px;
+}
+
+body{
+    background-color:  #131b28;
+    color: white;
+}
+
+.lista-itens{
+    list-style: none;
+    display: flex;
+    font-size: 20px;
+    font-weight: 400;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.lista-itens li{
+    padding: 10px;
+    margin: 5px;
+}
+
+.task-pending {
+    background-color: #282f3d; /* Um tom um pouco mais claro que o fundo #131b28 */
+    color: #F3F4F6;            /* Um branco levemente acinzentado para não doer o olho */
+    padding: 6px 16px;   
+    border-radius: 10px;      /* Colocar um valor gigante aqui força as bordas a ficarem 100% redondas */
+    font-size: 18px;           /* Texto um pouco menor, já que é só um aviso */
+    font-weight: 500;
+    
+    /* Remove a borda branca sólida que deixa com cara de site antigo */
+    border: 1px solid #374151; /* Uma borda cinza bem escura só para dar acabamento */
+}
+
+
+.perfil {
+    /* Adicionando Flexbox na bolinha para o ícone ficar no centro exato */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 23px;  /* Aumentei um pouco para caber o clique do dedo */
+    height: 23px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #374151; /* Uma borda cinza bem escura só para dar acabamento */
+}
+
+.sino {
+    /* Adicionando Flexbox na bolinha para o ícone ficar no centro exato */
+    background-color: #282f3d; /* Um tom um pouco mais claro que o fundo #131b28 */
+    display: flex;
+    border-radius: 10px;      /* Colocar um valor gigante aqui força as bordas a ficarem 100% redondas */
+    justify-content: center;
+    align-items: center;
+    width: 23px;  /* Aumentei um pouco para caber o clique do dedo */
+    height: 23px;
+    cursor: pointer;
+    border: 1px solid #374151;
+}
+
+.main-corpo{
+    display: grid;
+    grid-template-columns: 0.8fr 2fr;
+    gap: 50px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.form-column{
+     background-color: #282f3d;
+     padding: 32px 40px 40px 25px;
+     border-radius: 10px;
+     align-self: flex-start;
+     /* height: calc(100vh - 120px); não gostei */ 
+     position: sticky;
+     top: 116px;
+}
+
+.input-group, .seletor-group, .text-area-group{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.label-style{
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+.section-right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.input-style, .seletor-style{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #282f3d;
+    border: 1.5px solid #374151;
+    color: #F3F4F6;
+    font-size: 16px;
+    outline: none;
+}
+
+.description{
+    border-radius: 10px;
+    background-color: #282f3d;
+    border: 1.5px solid #374151;
+    color: #F3F4F6;
+    font-size: 16px;
+    outline: none;
+    padding: 10px;
+    height: 120px;
+    resize: none;
+}
+
+.card {
+    background-color: #282f3d;
+    padding: 32px 40px 20px 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-style{
+    padding: 10px;
+    background-color: rgb(4, 223, 26);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #282f3d;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+
+.title-task{
+    font-size: 25px;
+}
+
+.description-task{
+    color: #9d9fa3;
+    padding: 5px 0px 5px 0px;
+    /* flex-grow: 1; ou no elemento da data e usa margin */
+}
+
+.data-card{
+    align-self: flex-end;
+    margin-top: auto;
+}

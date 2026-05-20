@@ -1,0 +1,30 @@
+<?php 
+
+    namespace MF\Controller;
+
+    abstract class Action {
+        protected $view;
+
+
+        protected function render($view, $layout = 'layout') {
+            $this -> view->page = $view;
+
+            if(file_exists("../App/Views/".$layout.".phtml")) {
+                require_once "../App/Views/".$layout.".phtml";
+            } else {
+                $this -> content();
+            }
+
+        }
+
+        protected function content() {
+            // $dados = $this -> view -> dados; Pode ser feito assim ou no proprio arquivo
+            $classeAtual = get_class($this);
+            $classeAtual = str_replace('App\\Controllers\\', '', $classeAtual);
+            $classeAtual = strtolower(str_replace('Controller', '', $classeAtual));
+
+            require_once "../App/Views/".$classeAtual."/".$this -> view -> page.".phtml";
+        }
+    }
+
+?>
