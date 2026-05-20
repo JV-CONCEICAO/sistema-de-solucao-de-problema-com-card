@@ -50,5 +50,12 @@
 
             return $stmt->execute();
         }
+
+        public function getAll() {
+            $query = "SELECT id, titulo, linguagem, descricao FROM registros ORDER BY id DESC";
+            $stmt = $this->db->prepare($query);
+            $stmt->execute();
+            return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        }
     }
 ?>

@@ -10,17 +10,20 @@
     class IndexController extends Action{
 
         public function __construct(){
-            $this -> view = new stdClass();
+            $this->view = new stdClass();
         }
 
         public function index() {
+            //Listar todos os cards existentes
+            $registro = Container::getMOdel("Registro");
+            $this->view->registros = $registro->getAll();
 
             $this -> render('index');
         }
 
         public function registraProblemaSolucao() {
             //Fazer as validações do formulario
-            if(!$this -> validaForm($_POST)){
+            if(!$this->validaForm($_POST)){
                 header('Location: /?situacaoForm=erro');
                 return;
             }
